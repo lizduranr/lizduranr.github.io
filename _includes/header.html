@@ -1,0 +1,38 @@
+{% include sidebar.html %}
+<nav class="navbar is-fixed-top">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <amp-img src="{{ site.baseurl | append:'/assets/img/logo.png'}}" 
+               alt="{{ site.title }}"
+               title="Logo {{ site.title }}"
+               width="30" height="30"></amp-img>
+    </a>
+    <div class="navbar-item" style="flex-grow: 1; justify-content: center;">
+      {% for language in site.data.lang %}
+      <a class="button is-white is-hidden-desktop" href="#">
+        {{ language[1].icon }} {{ language[0] }} 
+      </a>
+      {% endfor %}
+    </div>
+
+    <a class="navbar-burger burger" on='tap:sidebar.toggle' 
+       data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-end">
+      {% for language in site.data.lang %}
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="#">
+          {{ language[1].icon }} {{ language[0] }} 
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</nav>

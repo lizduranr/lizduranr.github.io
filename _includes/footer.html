@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="container">
+    <div class="content">
+      <div class="has-text-centered">
+        <a href="https://www.facebook.com/lizduranphoto/" target="_blank">
+          <amp-img src="/assets/img/facebook.webp" alt="facebook link" height="22" width="22" layout="intrinsic"></amp-img>
+         </a>
+         <a href="https://www.instagram.com/lizduranphoto" target="_blank">
+           <amp-img src="/assets/img/instagram.webp" alt="instagram link" height="22" width="22" layout="intrinsic"></amp-img>
+         </a>
+        <p>
+         {{ site.time | date: '%Y' }} - {{ site.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% if jekyll.environment == "production" %}
+<amp-analytics type="googleanalytics" id="analytics1">
+<script type="application/json">
+{
+  "vars": {
+    "account": "{{ site.google_analytics }}"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+{% endif %}

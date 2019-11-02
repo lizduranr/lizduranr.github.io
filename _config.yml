@@ -1,0 +1,45 @@
+# Site settings
+
+title: Liz Durán R.
+description: > # this means to ignore newlines until "baseurl:"
+     Photographer
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Needed by jekyll-seo-tag
+logo: '/assets/img/logo.png' 
+#linkedin_username:  lizduran
+#github_username:  lizduranr
+
+google_analytics: 
+google_site_verification: 
+
+# Build settings
+sass:
+    style: compressed
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+plugins:
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+ 
+include:
+  - _pages
+
+defaults:
+    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/pajaron.png'}}
+    - {scope: {path: "assets/img/portfolio/food"}, values: {food: true}}
+    - {scope: {path: "assets/img/portfolio/wedding"}, values: {wedding: true}}

@@ -1,0 +1,42 @@
+$white: #ffffff;
+$navbar-burger-color: #000000;
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.border-image {
+  border-radius: 50%;
+}
+
+$label-color: $white; 
+
+$lightblue: #03abea;
+//$lightblue-invert: #ffffff;
+
+$primary: $lightblue;
+//$primary-invert: $darkblue-invert;
+
+p.kaushan {
+  font-family: 'Kaushan Script';
+}
+
+.home {
+    background-image: url(/assets/img/pajaro.png);
+    background-repeat: no-repeat;
+    background-position: 55% 10%;
+	background-size: 30% auto;
+}
+
+@media (max-width: 767px) {
+	.home {
+    background-position: 95% 12em;
+	background-size: 50% auto;
+	}
+}
+
+.bottom-three {
+    margin-bottom: 3cm;
+}
+
+$input-placeholder-color: black;

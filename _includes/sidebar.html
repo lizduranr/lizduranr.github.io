@@ -1,0 +1,18 @@
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right">
+  <amp-img class="amp-close-image"
+    src="/assets/img/close.png"
+    width="30"
+    height="30"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0"></amp-img>
+
+    {% for language in site.data.lang %}
+      <a class="navbar-item is-link" href="#">
+        {{ language[1].icon }} {{ language[1].label }} 
+      </a>
+    {% endfor %}
+</amp-sidebar>

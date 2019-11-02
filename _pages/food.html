@@ -1,0 +1,81 @@
+---
+layout: default
+permalink: /portfolio/food
+lang: en_US
+carousel: true
+bind: true
+selector: true
+fittext: true
+lightbox: true
+
+---
+
+<div class="container">
+  <div class="content">
+    <p class="kaushan is-size-4 is-italic">
+      Food
+    </p>
+
+<amp-carousel id="carousel"
+  lightbox
+  width="320"
+  height="210"
+  layout="responsive"
+  type="slides"
+  on="slideChange:
+          carouselSelector.toggle(index=event.index, value=true),
+          carouselPreview.goToSlide(index=event.index)
+  "
+  >
+  {% assign image_files = site.static_files | where: "food", true %}
+  {% assign counter = 0 %}
+  {% for myimage in image_files %}
+  {% assign parts = myimage.name | split: '-' %}
+  <figure>
+    <amp-image-lightbox id="lightbox{{ counter }}"
+    layout="nodisplay"></amp-image-lightbox>
+  <amp-img on="tap:lightbox{{ counter }}"
+    role="button"
+    tabindex="{{ counter }}"
+    aria-describedby="{{ myimage.name }}"
+    alt="Image 1 from Sponge Bob"
+    title="Image 1 from Sponge Bob"
+    src="{{ myimage.path }}"
+    layout="responsive"
+    width="319"
+    height="200"></amp-img>
+  <div id="{{ myimage.name }}">
+    <p class="subtitle is-white">
+      {{ parts[0] }}
+    </p>
+    <p>
+      {{ parts[1] | split: '_' | join: ' ' }}
+    </p>
+  </div>
+  </figure>
+  {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+</amp-carousel>
+<amp-selector id="carouselSelector"
+  on="select:carousel.goToSlide(index=event.targetOption)"
+  layout="container">
+  <amp-carousel id="carouselPreview"
+    class="carousel-preview"
+    height="72"
+    layout="fixed-height"
+    type="carousel">
+    {% assign image_files = site.static_files | where: "food", true %}
+    {% assign counter = 0 %}
+    {% for myimage in image_files %}
+    <amp-img option="{{ counter }}"
+      src="{{ myimage.path }}"
+      width="60"
+      height="40"
+      alt="{{ myimage.name }}"></amp-img>
+    {% assign counter = counter | plus: 1 %}
+    {% endfor %}
+  </amp-carousel>
+</amp-selector>
+
+  </div>
+</div>

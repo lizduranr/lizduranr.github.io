@@ -1,0 +1,30 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <link rel="alternate" href="{{ site.baseurl | append: '/es'}}" hreflang="es" />
+  <link rel="alternate" href="{{ site.baseurl | append: '/fr'}}" hreflang="fr" />
+  {% include head.html %}
+  <body class="has-navbar-fixed-top  home">
+    {% include header.html %}
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <p class="kaushan  has-text-weight-bold is-size-1">
+              Liz Durán R
+            </p>
+            <p class="kaushan is-size-4">
+              Photopgrapher
+            </p>
+          </div>
+          <div class="column is-3 is-offset-9">
+            <a href="/bio" class="subtitle">Bio</a><br>
+            <a href="/portfolio" class="subtitle">Portfolio</a><br>
+            <a href="/contact-me" class="subtitle">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+      {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
