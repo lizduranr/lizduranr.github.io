@@ -15,15 +15,10 @@
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
   {% endif %}
   {% if page.lightbox %}
-    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
   {% endif %}
 
-
-
-  <!--
-  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-  -->
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ 
     site.title }}{% endif %}</title> {% seo title=false %}
   <meta property="og:type" content="website" />
