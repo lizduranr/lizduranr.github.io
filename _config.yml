@@ -40,7 +40,8 @@ exclude:
 include:
   - _pages
 
+#- {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/pajaron.png'}}
 defaults:
-    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/pajaron.png'}}
+    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/lizduranr/assets/img/pajaron.png'}}
     - {scope: {path: "assets/img/portfolio/food"}, values: {food: true}}
     - {scope: {path: "assets/img/portfolio/wedding"}, values: {wedding: true}}

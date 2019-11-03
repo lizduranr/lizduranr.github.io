@@ -3,10 +3,10 @@
     <div class="content">
       <div class="has-text-centered">
         <a href="https://www.facebook.com/lizduranphoto/" target="_blank">
-          <amp-img src="/assets/img/facebook.webp" alt="facebook link" height="22" width="22" layout="intrinsic"></amp-img>
+          <amp-img src="{{ '/assets/img/facebook.webp' | relative_url }}" alt="facebook link" height="22" width="22" layout="intrinsic"></amp-img>
          </a>
          <a href="https://www.instagram.com/lizduranphoto" target="_blank">
-           <amp-img src="/assets/img/instagram.webp" alt="instagram link" height="22" width="22" layout="intrinsic"></amp-img>
+           <amp-img src="{{ '/assets/img/instagram.webp' | relative_url }}" alt="instagram link" height="22" width="22" layout="intrinsic"></amp-img>
          </a>
         <p>
          {{ site.time | date: '%Y' }} - {{ site.title }}
