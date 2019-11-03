@@ -14,7 +14,7 @@ lang: en_US
     <div class="columns is-centered  has-text-centered">
       <div class="column is-3">
         <a>
-        <amp-img src="/assets/img/portfolio/advertising.webp" 
+          <amp-img src="{{ '/assets/img/portfolio/advertising.webp' | relative_url }}" 
                  on="tap:advertising.toggleVisibility, wedding.hide, journalism.hide, advertising.scrollTo(duration=500)"
                  alt=""
                  title=""
@@ -28,7 +28,7 @@ lang: en_US
       </div>
       <div class="column is-3">
         <a>
-        <amp-img src="/assets/img/portfolio/bookswedding.webp" 
+          <amp-img src="{{ '/assets/img/portfolio/bookswedding.webp' | relative_url }}" 
                  on="tap:wedding.toggleVisibility, journalism.hide, advertising.hide, wedding.scrollTo(duration=500)"
                  alt=""
                  title=""
@@ -42,7 +42,7 @@ lang: en_US
       </div>
       <div class="column is-3">
         <a>
-        <amp-img src="/assets/img/portfolio/journalism.webp" 
+          <amp-img src="{{ '/assets/img/portfolio/journalism.webp' | relative_url }}" 
                  on="tap:journalism.toggleVisibility, wedding.hide, advertising.hide, journalism.scrollTo(duration=500)"
                  alt=""
                  title=""
@@ -57,8 +57,8 @@ lang: en_US
     </div>
     <div id="advertising" class="columns is-centered  has-text-centered" hidden="">
       <div class="column is-3">
-        <a href="/portfolio/food">
-        <amp-img src="/assets/img/portfolio/food.webp" 
+        <a href="{{ '/portfolio/food' | relative_url }}">
+          <amp-img src="{{ '/assets/img/portfolio/food.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
@@ -70,7 +70,7 @@ lang: en_US
           </p>
       </div>
       <div class="column is-3">
-        <amp-img src="/assets/img/portfolio/others.webp" 
+        <amp-img src="{{ '/assets/img/portfolio/others.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
@@ -83,7 +83,7 @@ lang: en_US
     </div>
     <div id="wedding" class="columns is-centered  has-text-centered" hidden="">
       <div class="column is-3">
-        <amp-img src="/assets/img/portfolio/books.webp" 
+        <amp-img src="{{ '/assets/img/portfolio/books.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
@@ -94,8 +94,8 @@ lang: en_US
           </p>
       </div>
       <div class="column is-3">
-        <a href="/portfolio/wedding">
-        <amp-img src="/assets/img/portfolio/wedding.webp" 
+        <a href="{{ '/portfolio/wedding' | relative_url }}">
+          <amp-img src="{{ '/assets/img/portfolio/wedding.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
@@ -109,7 +109,7 @@ lang: en_US
     </div>
     <div id="journalism" class="columns is-centered  has-text-centered" hidden="">
       <div class="column is-3">
-        <amp-img src="/assets/img/portfolio/photojournalism.webp" 
+        <amp-img src="{{ '/assets/img/portfolio/photojournalism.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
@@ -120,7 +120,7 @@ lang: en_US
           </p>
       </div>
       <div class="column is-3">
-        <amp-img src="/assets/img/portfolio/travels.webp" 
+        <amp-img src="{{ '/assets/img/portfolio/travels.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"

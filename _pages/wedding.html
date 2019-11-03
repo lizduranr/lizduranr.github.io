@@ -39,7 +39,7 @@ lightbox: true
     aria-describedby="{{ myimage.name }}"
     alt="Image 1 from Sponge Bob"
     title="Image 1 from Sponge Bob"
-    src="{{ myimage.path }}"
+    src="{{ myimage.path | relative_url }}"
     layout="fixed"
     width="300"
     height="210"></amp-img>
@@ -67,7 +67,7 @@ lightbox: true
     {% assign counter = 0 %}
     {% for myimage in image_files %}
     <amp-img option="{{ counter }}"
-      src="{{ myimage.path }}"
+      src="{{ myimage.path | relative_url }}"
       width="60"
       height="40"
       alt="{{ myimage.name }}"></amp-img>
