@@ -4,7 +4,7 @@ title: Liz Durán R.
 description: > # this means to ignore newlines until "baseurl:"
      Photographer
 baseurl: "" # the base hostname & protocol for your site, e.g. http://example.com
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lizduranr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Needed by jekyll-seo-tag
 logo: '/assets/img/logo.png' 
@@ -41,8 +41,6 @@ include:
   - _pages
 
 defaults:
-    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/pajaron.png'}}
+    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/pajaro.png'}}
     - {scope: {path: "assets/img/portfolio/food"}, values: {food: true}}
     - {scope: {path: "assets/img/portfolio/wedding"}, values: {wedding: true}}
-
-theme: jekyll-theme-minimal
