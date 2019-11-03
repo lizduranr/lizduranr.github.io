@@ -10,9 +10,91 @@
     role="button"
     tabindex="0"></amp-img>
 
+<div class="field has-addons">
     {% for language in site.data.lang %}
-      <a class="navbar-item is-link" href="#">
-        {{ language[1].icon }} {{ language[1].label }} 
-      </a>
+  <p class="control">
+    <button class="button">
+      <span class="icon is-small">
+        {{ language[1].icon }} 
+      </span>
+      <span>{{ language[0] }}</span>
+    </button>
+  </p>
     {% endfor %}
+</div>
+
+    <a class="button is-fullwidth" href="/bio">
+      Bio
+    </a>
+    <a class="button is-fullwidth" href="/portfolio">
+      Portfolio
+    </a>
+
+    <div id="dropdown-trigger-advertising" class="navbar-item dropdown">
+      <div class="dropdown-trigger">
+        <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu" on="tap:dropdown-trigger-advertising.toggleClass(class='is-active')">
+          <span class="icon is-small">
+            🔽
+          </span>
+          <span>Advertising</span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="/portfolio/food" class="is-active dropdown-item">
+            Food
+          </a>
+          <a href="#" class="dropdown-item">
+            Others
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="dropdown-trigger-wedding" class="navbar-item dropdown">
+      <div class="dropdown-trigger">
+        <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu" on="tap:dropdown-trigger-wedding.toggleClass(class='is-active')">
+          <span class="icon is-small">
+            🔽
+          </span>
+          <span>Books & Wedding</span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item">
+            Books & Portrait
+          </a>
+          <a href="/portfolio/wedding" class="is-active dropdown-item">
+            Wedding
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="dropdown-trigger-journalism" class="navbar-item dropdown">
+      <div class="dropdown-trigger">
+        <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu" on="tap:dropdown-trigger-journalism.toggleClass(class='is-active')">
+          <span class="icon is-small">
+            🔽
+          </span>
+          <span>Journalism</span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item">
+            Photo journalism
+          </a>
+          <a href="#" class="dropdown-item">
+            Travels
+          </a>
+        </div>
+      </div>
+    </div>
+    <a class="button is-fullwidth" href="/contact-me">
+      Contact
+    </a>
+
+
 </amp-sidebar>

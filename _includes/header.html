@@ -7,13 +7,6 @@
                title="Logo {{ site.title }}"
                width="30" height="30"></amp-img>
     </a>
-    <div class="navbar-item" style="flex-grow: 1; justify-content: center;">
-      {% for language in site.data.lang %}
-      <a class="button is-white is-hidden-desktop" href="#">
-        {{ language[1].icon }} {{ language[0] }} 
-      </a>
-      {% endfor %}
-    </div>
 
     <a class="navbar-burger burger" on='tap:sidebar.toggle' 
        data-target="navbarExampleTransparentExample">
@@ -24,14 +17,47 @@
   </div>
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
-    <div class="navbar-end">
+    <div class="navbar-start">
       {% for language in site.data.lang %}
-      <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="#">
-          {{ language[1].icon }} {{ language[0] }} 
-        </a>
-      </div>
+      <a class="navbar-item is-hoverable" href="#">
+        {{ language[1].icon }} {{ language[0] }} 
+      </a>
       {% endfor %}
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="/bio">
+        Bio
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/portfolio">
+          Portfolio
+        </a>
+        <div class="navbar-dropdown is-boxed is-right">
+          <a class="navbar-item is-active" href="/portfolio/food">
+            Food
+          </a>
+          <a class="navbar-item is-active" href="/portfolio/wedding">
+            Wedding
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="#">
+            Books & Portrait
+          </a>
+          <a class="navbar-item" href="#">
+            Photo journalism
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="#">
+            Travels
+          </a>
+          <a class="navbar-item" href="#">
+            Others
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="/contact-me">
+        Contact
+      </a>
     </div>
 
   </div>

@@ -12,16 +12,19 @@ lightbox: true
 
 <section class="section">
 <div class="container">
-  <div class="content bottom-three">
-    <p class="kaushan is-size-4 is-italic">
+  <div class="content bottom-three has-text-centered">
+    <p class="kaushan is-size-4 is-italic has-text-left">
       Wedding
     </p>
 
 <amp-carousel id="carousel"
   lightbox
-  height="210"
-  layout="fixed-height"
-  type="carousel"
+  width="550"
+  height="370"
+  layout="intrinsic"
+  type="slides"
+  autoplay
+  delay="3000"
   on="slideChange:
           carouselSelector.toggle(index=event.index, value=true),
           carouselPreview.goToSlide(index=event.index)
@@ -41,11 +44,11 @@ lightbox: true
     alt="Image 1 from Sponge Bob"
     title="Image 1 from Sponge Bob"
     src="{{ myimage.path | relative_url }}"
-    layout="fixed"
-    width="300"
-    height="210"></amp-img>
+    layout="intrinsic"
+    width="550"
+    height="300"></amp-img>
   <div id="{{ myimage.name }}">
-    <p class="subtitle is-white">
+    <p class="is-size-5">
       {{ parts[0] }}
     </p>
     <p>
@@ -68,7 +71,7 @@ lightbox: true
     {% assign counter = 0 %}
     {% for myimage in image_files %}
     <amp-img option="{{ counter }}"
-      src="{{ myimage.path | relative_url }}"
+      src="{{ myimage.path  | relative_url }}"
       width="60"
       height="40"
       alt="{{ myimage.name }}"></amp-img>

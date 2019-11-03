@@ -11,52 +11,52 @@ lang: en_US
     <p class="kaushan is-size-4 is-italic">
       Portfolio
     </p>
-    <div class="columns is-centered  has-text-centered">
-      <div class="column is-3">
+    <div class="columns is-mobile is-centered  has-text-centered">
+      <div class="column is-4">
         <a>
           <amp-img src="{{ '/assets/img/portfolio/advertising.webp' | relative_url }}" 
-                 on="tap:advertising.toggleVisibility, wedding.hide, journalism.hide, advertising.scrollTo(duration=500)"
+                 on="tap:advertising.toggleVisibility, advertising-text.toggleClass(class='has-text-weight-bold'), wedding-text.toggleClass(class='has-text-weight-bold', force=false), journalism-text.toggleClass(class='has-text-weight-bold', force=false), wedding.hide, journalism.hide, advertising.scrollTo(duration=500)"
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
         </a>
-          <p class="subtitle">
+          <p id="advertising-text" class="is-size-4-desktop is-size-6-mobile">
             Advertising
           </p>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <a>
           <amp-img src="{{ '/assets/img/portfolio/bookswedding.webp' | relative_url }}" 
-                 on="tap:wedding.toggleVisibility, journalism.hide, advertising.hide, wedding.scrollTo(duration=500)"
+                 on="tap:wedding.toggleVisibility, wedding-text.toggleClass(class='has-text-weight-bold'), advertising-text.toggleClass(class='has-text-weight-bold', force=false), journalism-text.toggleClass(class='has-text-weight-bold', force=false), journalism.hide, advertising.hide, wedding.scrollTo(duration=500)"
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
         </a>
-          <p class="subtitle">
+          <p id="wedding-text" class="is-size-4-desktop is-size-6-mobile">
             Books - Wedding
           </p>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <a>
           <amp-img src="{{ '/assets/img/portfolio/journalism.webp' | relative_url }}" 
-                 on="tap:journalism.toggleVisibility, wedding.hide, advertising.hide, journalism.scrollTo(duration=500)"
+                 on="tap:journalism.toggleVisibility, journalism-text.toggleClass(class='has-text-weight-bold'), advertising-text.toggleClass(class='has-text-weight-bold', force=false), wedding-text.toggleClass(class='has-text-weight-bold', force=false), wedding.hide, advertising.hide, journalism.scrollTo(duration=500)"
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
         </a>
-          <p class="subtitle">
+          <p id="journalism-text" class="is-size-4-desktop is-size-6-mobile">
             Journalism
           </p>
       </div>
     </div>
-    <div id="advertising" class="columns is-centered  has-text-centered" hidden="">
-      <div class="column is-3">
+    <div id="advertising" class="columns is-mobile  is-centered  has-text-centered" hidden="">
+      <div class="column is-4">
         <a href="{{ '/portfolio/food' | relative_url }}">
           <amp-img src="{{ '/assets/img/portfolio/food.webp' | relative_url }}" 
                  alt=""
@@ -65,35 +65,35 @@ lang: en_US
                              layout="intrinsic"
                              ></amp-img>
         </a>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Food
           </p>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <amp-img src="{{ '/assets/img/portfolio/others.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Others
           </p>
       </div>
     </div>
-    <div id="wedding" class="columns is-centered  has-text-centered" hidden="">
-      <div class="column is-3">
+    <div id="wedding" class="columns  is-mobile is-centered  has-text-centered" hidden="">
+      <div class="column is-4">
         <amp-img src="{{ '/assets/img/portfolio/books.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Books & Portraits
           </p>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <a href="{{ '/portfolio/wedding' | relative_url }}">
           <amp-img src="{{ '/assets/img/portfolio/wedding.webp' | relative_url }}" 
                  alt=""
@@ -102,31 +102,31 @@ lang: en_US
                              layout="intrinsic"
                              ></amp-img>
         </a>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Wedding
           </p>
       </div>
     </div>
-    <div id="journalism" class="columns is-centered  has-text-centered" hidden="">
-      <div class="column is-3">
+    <div id="journalism" class="columns is-mobile is-centered  has-text-centered" hidden="">
+      <div class="column is-4">
         <amp-img src="{{ '/assets/img/portfolio/photojournalism.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Photo Journalism
           </p>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <amp-img src="{{ '/assets/img/portfolio/travels.webp' | relative_url }}" 
                  alt=""
                  title=""
                  width="187" height="387"
                              layout="intrinsic"
                              ></amp-img>
-          <p class="subtitle">
+          <p class="is-size-4-desktop is-size-6-mobile">
             Travels
           </p>
       </div>
