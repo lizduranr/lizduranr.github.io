@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "bundle exec jekyll serve --livereload",
     "watch": "./node_modules/.bin/gulp watch"
   },
   "repository": {
