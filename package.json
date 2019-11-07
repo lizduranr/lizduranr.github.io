@@ -4,9 +4,10 @@
   "description": "With Jekyll and Github Pages",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "bundle exec jekyll serve --livereload",
-    "watch": "./node_modules/.bin/gulp watch"
+    "build": "./node_modules/.bin/gulp build",
+    "watch": "./node_modules/.bin/gulp watch",
+    "test": "bundle exec jekyll build && ./node_modules/.bin/gulp amp_validator"
   },
   "repository": {
     "type": "git",
@@ -19,16 +20,18 @@
   },
   "homepage": "https://github.com/lizduranr/lizduranr.github.io#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
-    "gulp-image": "^4.3.0",
+    "gulp-imagemin": "^6.1.1",
     "gulp-purifycss": "^0.2.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^2.11.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
-    "i": "^0.3.6",
+    "gulp-rename": "^1.4.0",
+    "gulp-amphtml-validator": "^1.0.2",
     "npm": "^6.4.0"
   }
 }
